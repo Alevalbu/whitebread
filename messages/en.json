@@ -8,21 +8,47 @@
         "email": "Email Address",
         "phone": "Phone Number"
       },
+      "bookingTypeTitle": "What type of booker are you?",
+      "bookingLeisureBusiness": "Is your group staying for Business or Leisure?",
       "booking": {
         "title": "Booking Details",
+        "description": "Our team will try to accommodate your group’s preferences in terms of hotels and dates. If that’s not possible, we’ll do everything we can to offer the best alternatives.",
         "purpose": "Purpose of Travel",
+        "schoolTrip": "Please tick this box if you are booking for a school or youth group.",
         "purposeOptions": {
           "personal": "Personal",
           "business": "Business",
           "tmc": "Travel Management Company",
           "agent": "Travel Agent/Tour Operator"
         },
+        "otherPurpose": {
+          "business": "Business",
+          "leisure": "Leisure"
+        },
+        "reasonTitle": "What is the reason for your group's visit?",
         "occupancy": {
           "single": "Single Occupancy",
           "singleDesc": "1 adult",
           "double": "Double Occupancy",
-          "doubleDesc": "2 adults"
+          "doubleDesc": "2 adults",
+          "twin": "Twin",
+          "twinDes": "2 adults"
+        },
+        "packageTitle": "Package Type",
+        "packageDescription": "Subject to availability. Room only not available for group bookings.",
+        "packagesTypes": {
+          "breakfast": "Premier Inn Breakfast",
+          "mealDeal": "Meal deal (dinner, drink and breakfast)"
         }
+      },
+      "rooms": {
+        "title": "Rooms",
+        "description": "Select the maximum number of rooms required by room type and occupancy.",
+        "travellingChildren": "Travelling/staying with children (2-15 years).",
+        "accesible": "Accessible room is needed.",
+        "aditionalInformation": "Additional information (optional)",
+        "aditionalDes1": "Let us know if you have any additional information or special requests",
+        "aditionalDes2": "If you do not require the same number of rooms on each night of your stay, please state below the number and type of rooms required each night."
       },
       "submit": "Submit Booking",
       "errors": {

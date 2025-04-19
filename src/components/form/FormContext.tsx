@@ -3,33 +3,57 @@
 import { createContext, useContext, useReducer, ReactNode } from "react";
 
 export type FormState = {
+  title: string;
   firstName: string;
   lastName: string;
   email: string;
   phoneNumber: string;
   travelPurpose: string;
+  reasons: string;
+  location: string;
+  package: string;
+  otherPurpose: string;
+  schoolTrip: boolean;
   singleOccupancy: number;
   doubleOccupancy: number;
+  dateRangeStart: string;
+  dateRangeEnd: string;
+  twinOccupancy: number;
+  travellingChildren: boolean;
+  accesibilityRoom: boolean;
+  aditionalInfo: string;
   errors: Record<string, string>;
   isSubmitting: boolean;
   isSubmitted: boolean;
 };
 
 const initialState: FormState = {
+  title: "",
   firstName: "",
   lastName: "",
   email: "",
+  otherPurpose: "",
+  package: "",
+  reasons: "",
+  location: "",
+  dateRangeStart: '',
+  dateRangeEnd: '',
   phoneNumber: "",
+  schoolTrip: false,
   travelPurpose: "",
   singleOccupancy: 0,
   doubleOccupancy: 0,
+  twinOccupancy: 0,
+  travellingChildren: false,
+  accesibilityRoom: false,
+  aditionalInfo: "",
   errors: {},
   isSubmitting: false,
   isSubmitted: false,
 };
 
 type FormAction =
-  | { type: "UPDATE_FIELD"; field: string; value: string | number }
+  | { type: "UPDATE_FIELD"; field: string; value: string | number | boolean }
   | { type: "SET_ERRORS"; errors: Record<string, string> }
   | { type: "START_SUBMIT" }
   | { type: "SUBMIT_SUCCESS" }
@@ -79,7 +103,7 @@ function formReducer(state: FormState, action: FormAction): FormState {
 
 type FormContextType = {
   state: FormState;
-  updateField: (field: string, value: string | number) => void;
+  updateField: (field: string, value: string | number | boolean) => void;
   submitForm: () => Promise<void>;
   resetForm: () => void;
 };
@@ -95,12 +119,17 @@ export function FormProvider({
 }) {
   const [state, dispach] = useReducer(formReducer, initialState);
 
-  const updateField = (field: string, value: string | number) => {
+  const updateField = (field: string, value: string | number | boolean) => {
     dispach({ type: "UPDATE_FIELD", field, value });
   };
 
   const validateForm = (): Record<string, string> => {
     const errors: Record<string, string> = {};
+    if (!state.title)
+      errors.title =
+        locale === "de"
+          ? "Dieses Feld ist erforderlich"
+          : "This field is required";
 
     if (!state.firstName)
       errors.firstName =
@@ -154,6 +183,7 @@ export function FormProvider({
       dispach({ type: "SET_ERRORS", errors });
       return;
     }
+    console.log('here is my state', state);
 
     dispach({ type: "START_SUBMIT" });
 
@@ -193,20 +223,20 @@ export function FormProvider({
   };
 
   const resetForm = () => {
-    dispach({type: 'RESET_FORM'});
-  }
+    dispach({ type: "RESET_FORM" });
+  };
 
   return (
-    <FormContext.Provider value={{state, updateField, submitForm, resetForm}}>
-        {children}
+    <FormContext.Provider value={{ state, updateField, submitForm, resetForm }}>
+      {children}
     </FormContext.Provider>
-  )
+  );
 }
 
 export function useForm() {
-    const context = useContext(FormContext);
-    if (context === undefined) {
-        throw new Error('useForm must be within a Form Provider');
-    }
-    return context;
+  const context = useContext(FormContext);
+  if (context === undefined) {
+    throw new Error("useForm must be within a Form Provider");
+  }
+  return context;
 }

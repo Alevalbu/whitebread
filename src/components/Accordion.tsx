@@ -49,7 +49,7 @@ const Accordion: React.FC<AccordionProps> = ({ stages }) => {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto">
+    <div className="w-full max-w-md mx-auto text-black">
       {stages.map((stage, index) => (
         <AccordionItem
           key={index}

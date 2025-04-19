@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from "react";
 
-type SelectOption = {
+export type SelectOption = {
   value: string;
   label: string;
 };
