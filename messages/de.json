@@ -1,0 +1,38 @@
+{
+    "form": {
+      "title": "Buchungsformular",
+      "personal": {
+        "title": "Persönliche Informationen",
+        "firstName": "Vorname",
+        "lastName": "Nachname",
+        "email": "E-Mail-Adresse",
+        "phone": "Telefonnummer"
+      },
+      "booking": {
+        "title": "Buchungsdetails",
+        "purpose": "Reisezweck",
+        "purposeOptions": {
+          "personal": "Privat",
+          "business": "Geschäftlich",
+          "tmc": "Reisemanagement-Unternehmen",
+          "agent": "Reisebüro/Reiseveranstalter"
+        },
+        "occupancy": {
+          "single": "Einzelbelegung",
+          "singleDesc": "1 Erwachsener",
+          "double": "Doppelbelegung",
+          "doubleDesc": "2 Erwachsene"
+        }
+      },
+      "submit": "Buchung abschicken",
+      "errors": {
+        "required": "Dieses Feld ist erforderlich",
+        "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+        "phone": "Bitte geben Sie eine gültige Telefonnummer ein"
+      }
+    },
+    "languageSwitcher": {
+      "en": "Englisch",
+      "de": "Deutsch"
+    }
+  }

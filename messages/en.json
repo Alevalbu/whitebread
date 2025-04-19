@@ -1,0 +1,38 @@
+{
+    "form": {
+      "title": "Booking Form",
+      "personal": {
+        "title": "Personal Information",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email Address",
+        "phone": "Phone Number"
+      },
+      "booking": {
+        "title": "Booking Details",
+        "purpose": "Purpose of Travel",
+        "purposeOptions": {
+          "personal": "Personal",
+          "business": "Business",
+          "tmc": "Travel Management Company",
+          "agent": "Travel Agent/Tour Operator"
+        },
+        "occupancy": {
+          "single": "Single Occupancy",
+          "singleDesc": "1 adult",
+          "double": "Double Occupancy",
+          "doubleDesc": "2 adults"
+        }
+      },
+      "submit": "Submit Booking",
+      "errors": {
+        "required": "This field is required",
+        "email": "Please enter a valid email address",
+        "phone": "Please enter a valid phone number"
+      }
+    },
+    "languageSwitcher": {
+      "en": "English",
+      "de": "German"
+    }
+  }
