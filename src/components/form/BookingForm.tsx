@@ -4,7 +4,7 @@ import { FormProvider, useForm } from "./FormContext";
 import Input from "../UI/Input";
 import RadioGroup from "../UI/RadioButtonGroup";
 import OccupancyCounter from "../UI/OcuppancyCounter";
-import React, { useState } from "react";
+import React from "react";
 import Accordion, { AccordionStage } from "../Accordion";
 import Select, { SelectOption } from "../UI/Select";
 import { LocationEdit } from "lucide-react";
@@ -76,6 +76,7 @@ function BookingFormContactDetails() {
           <Select
             options={titleOption}
             value={state.title}
+            placeholder={t('selectOption')}
             variant={state.errors.title ? "error" : "default"}
             error={state.errors.title}
             onChange={(option) => (state.title = option)}
@@ -221,6 +222,7 @@ function BookingFormBookingDetails() {
           <Select
             options={reasonOptions}
             variant="default"
+            placeholder={t("selectOption")}
             value={state.reasons}
             onChange={(option) => {
               updateField("reasons", option);
@@ -350,22 +352,22 @@ function BookingFormRooms() {
   );
 }
 
-const formStages: AccordionStage[] = [
-  {
-    title: "Contact Details",
-    content: <BookingFormContactDetails />,
-  },
-  {
-    title: "Booking Details",
-    content: <BookingFormBookingDetails />,
-  },
-  {
-    title: "Room requirements",
-    content: <BookingFormRooms />,
-  },
-];
-
 export default function BookingForm({ locale }: BookingFormProps) {
+    const t = useTranslations("form");
+    const formStages: AccordionStage[] = [
+        {
+          title: t("contactDetails"),
+          content: <BookingFormContactDetails />,
+        },
+        {
+          title: t("bookingDetails"),
+          content: <BookingFormBookingDetails />,
+        },
+        {
+          title: t("roomRequirements"),
+          content: <BookingFormRooms />,
+        },
+      ];
   return (
     <FormProvider locale={locale}>
       <Accordion stages={formStages} />

@@ -1,6 +1,10 @@
 {
   "form": {
     "title": "Buchungsformular",
+    "contactDetails": "Kontaktinformationen",
+    "bookingDetails": "Buchungsdetails",
+    "roomRequirements": "Zimmeranforderungen",
+    "selectOption": "Wählen Sie eine Option aus",
     "personal": {
       "title": "Persönliche Informationen",
       "firstName": "Vorname",

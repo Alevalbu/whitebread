@@ -1,7 +1,7 @@
-import { headers } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 
-let submissions: any[] = [];
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const submissions: any[] = [];
 
 export async function POST(request: NextRequest) {
   try {

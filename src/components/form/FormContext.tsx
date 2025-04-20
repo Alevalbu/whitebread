@@ -201,6 +201,17 @@ export function FormProvider({
           travelPurpose: state.travelPurpose,
           singleOccupancy: state.singleOccupancy,
           doubleOccupancy: state.doubleOccupancy,
+          reasons: state.reasons,
+          location: state.location,
+          package: state.package,
+          otherPurpose: state.otherPurpose,
+          schoolTrip: state.schoolTrip,
+          dateRangeStart: state.dateRangeStart,
+          dateRangeEnd: state.dateRangeEnd,
+          twinOccupancy: state.twinOccupancy,
+          travellingChildren: state.travellingChildren,
+          accesibilityRoom: state.accesibilityRoom,
+          aditionalInfo: state.aditionalInfo
         }),
       });
 
@@ -217,7 +228,7 @@ export function FormProvider({
     } catch (error) {
       dispach({
         type: "SUBMIT_ERROR",
-        errors: { form: "An unexpected error occurred. Please try again." },
+        errors: { form: `An unexpected error occurred. Please try again. ${error}` },
       });
     }
   };

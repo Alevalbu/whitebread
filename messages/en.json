@@ -1,6 +1,10 @@
 {
     "form": {
       "title": "Booking Form",
+      "contactDetails": "Contact Details",
+      "bookingDetails": "Booking Details",
+      "roomRequirements": "Room requirements",
+      "selectOption": "select a option",
       "personal": {
         "title": "Personal Information",
         "firstName": "First Name",
