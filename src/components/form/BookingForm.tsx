@@ -75,6 +75,7 @@ function BookingFormContactDetails() {
         <div className="space-y-4">
           <Select
             options={titleOption}
+            value={state.title}
             variant={state.errors.title ? "error" : "default"}
             error={state.errors.title}
             onChange={(option) => (state.title = option)}
@@ -183,6 +184,7 @@ function BookingFormBookingDetails() {
           <RadioGroup
             options={travelPurposeOptions}
             name="travelPurpose"
+            defaultValue={state.travelPurpose}
             onChange={(value) => {
               updateField("travelPurpose", value);
             }}
@@ -198,6 +200,7 @@ function BookingFormBookingDetails() {
           <RadioGroup
             options={travelBusinessOrLeisure}
             name="other travel purposes"
+            defaultValue={state.otherPurpose}
             onChange={(value) => {
               updateField("otherPurpose", value);
             }}
@@ -245,6 +248,7 @@ function BookingFormBookingDetails() {
           <RadioGroup
             options={packageOptions}
             name="other travel purposes"
+            defaultValue={state.package}
             onChange={(value) => {
               updateField("package", value);
             }}
@@ -320,11 +324,11 @@ function BookingFormRooms() {
             onChange={(value) => updateField("twinOccupancy", value)}
           />
           <div className="flex flex-row">
-            <h2>Total: </h2>{" "}
+            <h2 className="mr-2">Total: </h2>
             {state.singleOccupancy +
               state.doubleOccupancy +
-              state.twinOccupancy}{" "}
-            <span>rooms</span>
+              state.twinOccupancy}
+            <span className="ml-2">rooms</span>
           </div>
           <h2>{t("rooms.aditionalInformation")}</h2>
           <p>{t("rooms.aditionalDes1")}</p>

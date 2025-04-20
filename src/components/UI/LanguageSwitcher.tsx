@@ -1,8 +1,9 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useRouter } from "next/navigation";
-import { locales } from "../../i18n";
+import { useRouter, usePathname } from "next/navigation";
+
+const locales = ['en', 'de'];
 
 type LanguageSwitcherProps = {
   currentLocale: string;
@@ -13,12 +14,14 @@ export default function LanguageSwitcher({
 }: LanguageSwitcherProps) {
   const t = useTranslations("languageSwitcher");
   const router = useRouter();
+  const pathName = usePathname();
 
   const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newLocale = e.target.value;
-    const currentPath = window.location.pathname;
+    const pathWithoutLocale = pathName.replace(`/${currentLocale}`, '') || '/';
 
-    const newPath = currentPath.replace(`/${currentLocale}`, `/${newLocale}`);
+    const newPath = `/${newLocale}${pathWithoutLocale}`;
+
     router.push(newPath);
   };
 
@@ -31,7 +34,7 @@ export default function LanguageSwitcher({
     >
       {locales.map((locale) => (
         <option key={locale} value={locale}>
-          {locale}
+          {t(`${locale}`, { fallback: locale.toUpperCase() })}
         </option>
       ))}
     </select>

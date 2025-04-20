@@ -1,38 +1,64 @@
 {
-    "form": {
-      "title": "Buchungsformular",
-      "personal": {
-        "title": "Persönliche Informationen",
-        "firstName": "Vorname",
-        "lastName": "Nachname",
-        "email": "E-Mail-Adresse",
-        "phone": "Telefonnummer"
+  "form": {
+    "title": "Buchungsformular",
+    "personal": {
+      "title": "Persönliche Informationen",
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "email": "E-Mail-Adresse",
+      "phone": "Telefonnummer"
+    },
+    "bookingTypeTitle": "Welche Art von Bucher sind Sie?",
+    "bookingLeisureBusiness": "Reist Ihre Gruppe geschäftlich oder privat?",
+    "booking": {
+      "title": "Buchungsdetails",
+      "description": "Unser Team wird versuchen, die Präferenzen Ihrer Gruppe bezüglich Hotels und Terminen zu berücksichtigen. Falls das nicht möglich ist, werden wir alles tun, um die besten Alternativen anzubieten.",
+      "purpose": "Reisezweck",
+      "schoolTrip": "Bitte kreuzen Sie dieses Kästchen an, wenn Sie für eine Schul- oder Jugendgruppe buchen.",
+      "purposeOptions": {
+        "personal": "Privat",
+        "business": "Geschäftlich",
+        "tmc": "Reisebüro",
+        "agent": "Reisevermittler/Reiseveranstalter"
       },
-      "booking": {
-        "title": "Buchungsdetails",
-        "purpose": "Reisezweck",
-        "purposeOptions": {
-          "personal": "Privat",
-          "business": "Geschäftlich",
-          "tmc": "Reisemanagement-Unternehmen",
-          "agent": "Reisebüro/Reiseveranstalter"
-        },
-        "occupancy": {
-          "single": "Einzelbelegung",
-          "singleDesc": "1 Erwachsener",
-          "double": "Doppelbelegung",
-          "doubleDesc": "2 Erwachsene"
-        }
+      "otherPurpose": {
+        "business": "Geschäftlich",
+        "leisure": "Freizeit"
       },
-      "submit": "Buchung abschicken",
-      "errors": {
-        "required": "Dieses Feld ist erforderlich",
-        "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
-        "phone": "Bitte geben Sie eine gültige Telefonnummer ein"
+      "reasonTitle": "Was ist der Grund für den Besuch Ihrer Gruppe?",
+      "occupancy": {
+        "single": "Einzelbelegung",
+        "singleDesc": "1 Erwachsener",
+        "double": "Doppelbelegung",
+        "doubleDesc": "2 Erwachsene",
+        "twin": "Zweibettzimmer",
+        "twinDes": "2 Erwachsene"
+      },
+      "packageTitle": "Pakettyp",
+      "packageDescription": "Vorbehaltlich Verfügbarkeit. Nur Zimmer ist für Gruppenbuchungen nicht verfügbar.",
+      "packagesTypes": {
+        "breakfast": "Premier Inn Frühstück",
+        "mealDeal": "Mahlzeitenangebot (Abendessen, Getränk und Frühstück)"
       }
     },
-    "languageSwitcher": {
-      "en": "Englisch",
-      "de": "Deutsch"
+    "rooms": {
+      "title": "Zimmer",
+      "description": "Wählen Sie die maximale Anzahl der benötigten Zimmer nach Zimmertyp und Belegung.",
+      "travellingChildren": "Reisen/Übernachtung mit Kindern (2-15 Jahre).",
+      "accesible": "Barrierefreies Zimmer wird benötigt.",
+      "aditionalInformation": "Zusätzliche Informationen (optional)",
+      "aditionalDes1": "Teilen Sie uns mit, wenn Sie zusätzliche Informationen oder besondere Wünsche haben",
+      "aditionalDes2": "Falls Sie nicht die gleiche Anzahl an Zimmern für jede Nacht Ihres Aufenthalts benötigen, geben Sie bitte unten die Anzahl und Art der benötigten Zimmer für jede Nacht an."
+    },
+    "submit": "Buchung absenden",
+    "errors": {
+      "required": "Dieses Feld ist erforderlich",
+      "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+      "phone": "Bitte geben Sie eine gültige Telefonnummer ein"
     }
+  },
+  "languageSwitcher": {
+    "en": "Englisch",
+    "de": "Deutsch"
   }
+}

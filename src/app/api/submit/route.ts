@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
 
     await new Promise((resolve) => setTimeout(resolve, 500));
 
-    return NextRequest.json(
+    return NextResponse.json(
       { success: true, data: submission },
       {
         status: 201,
@@ -40,7 +40,7 @@ export async function POST(request: NextRequest) {
           "Cache-Control": "no-store",
         },
       }
-    );
+  );
   } catch (errors) {
     console.error("Form Submition error", errors);
     return NextResponse.json(
