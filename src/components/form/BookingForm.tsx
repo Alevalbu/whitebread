@@ -179,7 +179,7 @@ function BookingFormBookingDetails() {
     <form noValidate className="space-y-8">
       <section>
         <div className="space-y-4">
-          <label className="block text-black text-lg font-bold mb-2">
+          <label aria-label={t("bookingTypeTitle")} className="block text-black text-lg font-bold mb-2">
             {t("bookingTypeTitle")}
           </label>
           <RadioGroup
@@ -195,7 +195,7 @@ function BookingFormBookingDetails() {
               {state.errors.travelPurpose}
             </p>
           )}
-          <label className="block text-black text-lg font-bold mb-2">
+          <label aria-label={t("bookingLeisureBusiness")} className="block text-black text-lg font-bold mb-2">
             {t("bookingLeisureBusiness")}
           </label>
           <RadioGroup
@@ -216,7 +216,7 @@ function BookingFormBookingDetails() {
             />
             <p className="ml-2">{t("booking.schoolTrip")}</p>
           </div>
-          <label className="block text-black text-lg font-bold mb-2">
+          <label aria-label={t("booking.reasonTitle")} className="block text-black text-lg font-bold mb-2">
             {t("booking.reasonTitle")}
           </label>
           <Select

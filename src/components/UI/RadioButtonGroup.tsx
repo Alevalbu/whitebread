@@ -43,7 +43,7 @@ const RadioButtonGroup: React.FC<RadioButtonGroupProps> = ({
             ${index > 0 ? "border-t-0" : ""}
           `}
         >
-          <label className="flex items-center w-full cursor-pointer">
+          <label aria-label={option.label} className="flex items-center w-full cursor-pointer">
             <div className="relative">
               <input
                 type="radio"

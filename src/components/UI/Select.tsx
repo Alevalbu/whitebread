@@ -54,7 +54,7 @@ const Select: React.FC<SelectProps> = (props) => {
   return (
     <div className={`relative mb-4 ${props.className || ""}`}>
       {props.label && (
-        <label className="block text-gray-700 text-sm font-medium mb-2">
+        <label aria-label={props.label} className="block text-gray-700 text-sm font-medium mb-2">
           {props.label}
           {props.required && <span className="text-red-500 ml-1">*</span>}
         </label>
