@@ -76,7 +76,7 @@ function BookingFormContactDetails() {
           <Select
             options={titleOption}
             value={state.title}
-            placeholder={t('selectOption')}
+            placeholder={t("selectOption")}
             variant={state.errors.title ? "error" : "default"}
             error={state.errors.title}
             onChange={(option) => (state.title = option)}
@@ -353,21 +353,21 @@ function BookingFormRooms() {
 }
 
 export default function BookingForm({ locale }: BookingFormProps) {
-    const t = useTranslations("form");
-    const formStages: AccordionStage[] = [
-        {
-          title: t("contactDetails"),
-          content: <BookingFormContactDetails />,
-        },
-        {
-          title: t("bookingDetails"),
-          content: <BookingFormBookingDetails />,
-        },
-        {
-          title: t("roomRequirements"),
-          content: <BookingFormRooms />,
-        },
-      ];
+  const t = useTranslations("form");
+  const formStages: AccordionStage[] = [
+    {
+      title: t("contactDetails"),
+      content: <BookingFormContactDetails />,
+    },
+    {
+      title: t("bookingDetails"),
+      content: <BookingFormBookingDetails />,
+    },
+    {
+      title: t("roomRequirements"),
+      content: <BookingFormRooms />,
+    },
+  ];
   return (
     <FormProvider locale={locale}>
       <Accordion stages={formStages} />

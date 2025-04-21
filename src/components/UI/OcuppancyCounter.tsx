@@ -53,6 +53,7 @@ const OccupancyCounter: React.FC<OccupancyCounterProps> = ({
 
       <div className="flex items-center space-x-2">
         <button
+          type="button"
           onClick={decrementCount}
           disabled={isDecrementDisabled}
           className={`
@@ -86,6 +87,7 @@ const OccupancyCounter: React.FC<OccupancyCounterProps> = ({
         </div>
 
         <button
+          type="button"
           onClick={incrementCount}
           disabled={isIncrementDisabled}
           className={`
