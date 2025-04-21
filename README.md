@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Whitebread Project
 
-## Getting Started
+A Next.js application with modern web development features.
 
-First, run the development server:
+![Next.js Badge](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![TypeScript Badge](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Vercel Badge](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+
+## 📋 Overview
+
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app), featuring modern web development practices and tools.
+
+**Live Demo:** [https://whitebread.vercel.app/](https://whitebread.vercel.app/)
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (LTS version recommended)
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development
+
+Run the local development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧪 Testing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Execute the test suite with:
 
-## Learn More
+```bash
+npm run test
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🏗️ Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The application follows the Next.js App Router architecture:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `app/` - Contains routes, layouts, and page components
+- `app/page.tsx` - The main entry point (homepage)
+- `public/` - Static assets like images and fonts
 
-## Deploy on Vercel
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a custom font family for Vercel.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔧 Development Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Hot Reload**: Pages auto-update as you edit files
+- **TypeScript Support**: Enhanced code quality and developer experience
+- **Modern React Patterns**: Using the latest React and Next.js features
+
+## 📚 Learn More
+
+To dive deeper into Next.js:
+
+- [Next.js Documentation](https://nextjs.org/docs) - comprehensive features and API
+- [Learn Next.js](https://nextjs.org/learn) - interactive tutorial
+
+## 🚢 Deployment
+
+The project is deployed on [Vercel](https://vercel.com), the platform from the creators of Next.js.
+
+For custom deployments:
+
+```bash
+# Build the application
+npm run build
+
+# Start the production server
+npm start
+```
+
+For more deployment options, check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to submit pull requests or open issues.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
